@@ -1,7 +1,12 @@
+#import streamlit as st
+#import notion_client
+#import pandas as pd
+#from collections import defaultdict//
 import streamlit as st
 import notion_client
 import pandas as pd
 from collections import defaultdict
+import importlib.metadata  
 
 # --- 債務最適化アルゴリズム ---
 def simplify_debts(balances):
@@ -76,7 +81,28 @@ def fetch_notion_data(api_key, database_id):
     return results
 
 # --- メインのStreamlitアプリ ---
+# --- メインのStreamlitアプリ ---
 def main():
+    st.set_page_config(layout="wide")
+    st.title("旅行費用 割り勘精算アプリ 💰")
+
+    # 
+    st.header("【デバッグ情報】")
+    try:
+        version = importlib.metadata.version("notion-client")
+        st.write(f"**現在インストールされている notion-client のバージョン: {version}**")
+    except Exception as e:
+        st.error(f"バージョン情報の取得に失敗: {e}")
+    st.divider()
+    # 
+
+    # --- 警告：プロパティ設定について ---
+    st.info(
+        """
+        このアプリが正しく動作するには...
+        """
+    )
+    # ... (以下、残りのコードは変更なし) ...
     st.set_page_config(layout="wide")
     st.title("旅行費用 割り勘精算アプリ 💰")
 
