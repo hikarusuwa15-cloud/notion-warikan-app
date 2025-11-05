@@ -1,3 +1,3 @@
 streamlit
-notion-client
+notion-client>=1.0.0
 pandas
