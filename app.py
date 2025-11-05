@@ -86,17 +86,6 @@ def main():
     st.set_page_config(layout="wide")
     st.title("旅行費用 割り勘精算アプリ 💰")
 
-    #
-
-    # --- 警告：プロパティ設定について ---
-    st.info(
-        """
-        このアプリが正しく動作するには...
-        """
-    )
-    # ... (以下、残りのコードは変更なし) ...
-    st.set_page_config(layout="wide")
-    st.title("旅行費用 割り勘精算アプリ 💰")
 
     # --- 警告：プロパティ設定について ---
     st.info(
