@@ -86,15 +86,7 @@ def main():
     st.set_page_config(layout="wide")
     st.title("旅行費用 割り勘精算アプリ 💰")
 
-    # 
-    st.header("【デバッグ情報】")
-    try:
-        version = importlib.metadata.version("notion-client")
-        st.write(f"**現在インストールされている notion-client のバージョン: {version}**")
-    except Exception as e:
-        st.error(f"バージョン情報の取得に失敗: {e}")
-    st.divider()
-    # 
+    #
 
     # --- 警告：プロパティ設定について ---
     st.info(
